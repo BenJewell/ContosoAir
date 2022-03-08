@@ -7,7 +7,7 @@ const session = require("express-session");
 const flash = require('express-flash');
 const favicon = require('serve-favicon');
 
-const passport = require('./src/config/passport.config');
+//const passport = require('./src/config/passport.config');
 const configureI18N = require('./src/config/i18n.config');
 
 const i18n = configureI18N(__dirname);
