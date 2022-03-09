@@ -17,5 +17,10 @@ steps:
 
 - script: |
     npm install
-    npm run build
-  displayName: 'npm install and build'
+    npm test
+  displayName: 'Run unit tests'
+  continueOnError: true
+
+- task: PublishTestResulsts@2
+  displayName: 'Publish Test Results'
+  condition: succeededOrFailed()
